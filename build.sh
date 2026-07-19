@@ -186,6 +186,7 @@ for FILE in _temp/*.metadata.json; do
 done
 echo "]" >> _temp/search.json
 x cp -r _temp/search.json _site/
+x cp -v _recipes/*.md _site/
 
 TIME_END=$(date +%s)
 TIME_TOTAL=$((TIME_END-TIME_START))
