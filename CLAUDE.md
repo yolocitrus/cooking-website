@@ -80,6 +80,11 @@ The GitHub Actions workflow (`.github/workflows/build-ci.yml`) automates:
 - Generating PDF
 - Deploying to GitHub Pages
 
+- **Action pinning**: All GitHub Actions must be pinned to a full-length commit SHA (not a tag like `@v4`) for security. Always add the version as a trailing comment for readability, e.g.:
+  ```yaml
+  uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+  ```
+
 ## Architecture Notes
 
 ### Recipe Formats
@@ -171,6 +176,9 @@ The `cooklang/` directory contains a Python package for parsing and converting c
 >> [风味标签]: [yes/留空]
 ```
 
+- `original_title` should be in **English**, using common English ingredient/cooking terms (e.g., "Green Onion" not "Scallion", "Steamed Fish with Ginger and Green Onion").
+- `author` is typically `yolocitrus` for original recipes or the source platform (e.g., `youtube`).
+
 ### Ingredients List
 - Ingredients can be listed in sections with optional titles, using the `@ingredient{quantity}` format.
 - Example: `蛋黄糊：@鸡蛋黄{3个}，@砂糖{12g}，@植物油{30g}`
@@ -183,3 +191,4 @@ The `cooklang/` directory contains a Python package for parsing and converting c
 - **IMPORTANT**: Always include empty braces `{}` for ingredients without specific quantities.
 - Parenthetical notes are allowed, e.g., `（无需回温）` or `（例如从4档开始）`.
 - Comments starting with `*` are allowed, e.g., `*食材重量仅供参考，具体可凭感觉行事`
+- **Split logically distinct actions into separate steps** (blank line between them in the `.cook` file). For example, preparing a sauce and pouring it should be two separate steps rather than one run-on step.
