@@ -21,7 +21,7 @@ dynamic = ["version", "description"]
 dependencies = ["typer", "python-frontmatter", "python-slugify"]
 
 [project.optional-dependencies]
-test = ["pytest >=2.7.3", "pytest-cov", "mypy"]
+test = ["pytest >=9.0.3", "pytest-cov", "mypy"]
 dev = ["black", "flake8", "flake8-bugbear", "pep8-naming", "flake8-builtins"]
 
 [project.urls]
