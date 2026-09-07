@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 attrs = "~=22.2.0"
-black = "~=24.3.0"
 coverage = {extras = ["toml"] }
 exceptiongroup = "~=1.1.0"
 flake8 = "*"
@@ -16,7 +15,6 @@ mccabe = "~=0.7.0"
 mypy = "~=1.0.0"
 mypy-extensions = "~=1.0.0"
 packaging = "~=23.0"
-pathspec = "~=0.11.0"
 pep8-naming = "~=0.13.3"
 platformdirs = "~=3.0.0"
 pluggy = "~=1.0.0"
@@ -34,6 +32,8 @@ simplejson = "~=3.20.1"
 loguru = "~=0.7.3"
 simpleeval = "~=1.0.5"
 python-multipart = "~=0.0.31"
+black = "~=26.3.1"
+pathspec = "~=1.0.0"
 
 [dev-packages]
 
