@@ -32,8 +32,9 @@ simpleeval = "~=1.0.5"
 python-multipart = "~=0.0.31"
 black = "~=26.3.1"
 pathspec = "~=1.0.0"
-pluggy = "~=1.2.0"
 pytest-cov = "~=7.0.0"
+pluggy = "~=1.5.0"
+pytest = "~=9.0.0"
 
 [dev-packages]
 
